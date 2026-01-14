@@ -1,21 +1,28 @@
-// Função para mudar o estilo da barra de navegação ao rolar a página
+// 1. Efeito de transparência na barra de navegação ao rolar
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
-    
-    // Se a rolagem passar de 50 pixels, adiciona a classe 'scrolled'
     if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
+        navbar.style.background = '#0b0b64'; // Azul oficial ao descer
+        navbar.style.transition = '0.5s';
+        document.querySelector('.logo-nav span').style.color = 'white';
+        document.querySelectorAll('.btn-entrar-contato').forEach(btn => {
+            btn.style.color = 'white';
+            btn.style.borderColor = 'white';
+        });
     } else {
-        navbar.classList.remove('scrolled');
+        navbar.style.background = 'white'; // Volta para branco no topo
+        document.querySelector('.logo-nav span').style.color = '#0b0b64';
+        document.querySelectorAll('.btn-entrar-contato').forEach(btn => {
+            btn.style.color = '#0b0b64';
+            btn.style.borderColor = '#0b0b64';
+        });
     }
 });
 
-// Função para validar se o número de telefone foi configurado (Apenas para teste)
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href.includes('5500000000000')) {
-            console.warn("Atenção: Você ainda não configurou o número de WhatsApp no HTML!");
-        }
+// 2. Mensagem de confirmação ao clicar no botão de currículo
+const btnCV = document.querySelector('.btn-whatsapp-cv');
+if (btnCV) {
+    btnCV.addEventListener('click', () => {
+        console.log("Redirecionando para o WhatsApp do RH da RC Silva...");
     });
-});
+}
