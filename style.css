@@ -1,0 +1,118 @@
+:root {
+    --azul-marinho: #001f3f;
+    --branco: #ffffff;
+    --cinza-claro: #f4f4f4;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    color: var(--azul-marinho);
+    background-color: var(--branco);
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--branco);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--azul-marinho);
+}
+
+.logo span { color: #0056b3; }
+
+/* Banner Principal */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), 
+                url('https://images.unsplash.com/photo-1519003722824-192d99a24bb7?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.btn-principal {
+    background: #0056b3;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Parceiros */
+.parceiros {
+    padding: 50px 5%;
+    text-align: center;
+    background: var(--cinza-claro);
+}
+
+.logos-parceiros {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.parceiro-card {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Trabalhe Conosco */
+.trabalhe-conosco {
+    padding: 60px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.cv-card {
+    text-align: center;
+    max-width: 500px;
+    border: 2px solid var(--azul-marinho);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.btn-cv {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Botão Flutuante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
